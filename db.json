@@ -1,0 +1,75 @@
+{
+  "projects": [
+    {
+      "id": "fe7b",
+      "name": "ESTO",
+      "description": "12",
+      "tasks": [
+        {
+          "name": "fr",
+          "completed": false,
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "8150",
+      "name": "JuanitoPerez",
+      "description": "Salsa",
+      "tasks": [
+        {
+          "name": "Nuuuuuo",
+          "completed": false,
+          "id": "1"
+        },
+        {
+          "name": "aaa",
+          "completed": false,
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "id": "de6f",
+      "name": "Fundamen ",
+      "description": "Fundamen",
+      "tasks": [
+        {
+          "name": "Validar funciones",
+          "completed": false,
+          "id": "1"
+        },
+        {
+          "name": "Rfua",
+          "completed": false,
+          "id": "1"
+        },
+        {
+          "name": "LLLL",
+          "completed": false,
+          "id": "3"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "52c2",
+      "username": "Raul",
+      "password": "Raul",
+      "role": "editor"
+    },
+    {
+      "id": "61b4",
+      "username": "raul",
+      "password": "1234",
+      "role": "admin"
+    }
+  ]
+}
