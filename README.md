@@ -12,6 +12,10 @@ Sigue estos pasos para instalar y ejecutar la aplicación:
 - 📂 **Base de Datos (`db.json`)**: [http://localhost:3000/]
 - 🔑 **Inicio de Sesión**: [http://localhost:4200/login]
 - 👥 **Gestión de Usuarios**: [http://localhost:4200/user-management]
+  
+- 🧑‍💻 Usuario de Prueba
+     Usuario: admin
+     Contraseña: admin123
 
 ---
 
