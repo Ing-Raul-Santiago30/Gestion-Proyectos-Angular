@@ -18,6 +18,10 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   login(): void {
+    if (!this.username.trim() || !this.password.trim()) {
+      this.errorMessage = 'El usuario y la contraseña son obligatorios';
+      return;
+    }
     this.authService.login(this.username, this.password).subscribe({
       next: () => this.router.navigate(['/']),
       error: () => this.errorMessage = 'Usuario o contraseña incorrectos'

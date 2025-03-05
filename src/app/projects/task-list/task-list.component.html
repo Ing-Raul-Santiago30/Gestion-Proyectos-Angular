@@ -3,7 +3,7 @@
   
     <div class="input-group mb-3" *ngIf="isAdmin() || isEditor()">
       <input type="text" class="form-control" placeholder="Nueva tarea..." [(ngModel)]="newTask.name">
-      <button class="btn btn-primary" (click)="addTask()">Agregar</button>
+      <button class="btn btn-primary"  (click)="addTask()">Agregar</button>
     </div>
   
     <ul class="list-group">

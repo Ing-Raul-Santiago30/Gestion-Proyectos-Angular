@@ -1,20 +1,38 @@
-<div class="container">
-    <h2>Lista de Proyectos</h2>
+<div class="container py-4">
+  <h2 class="text-center mb-4 fw-bold text-primary">Lista de Proyectos</h2>
+
   
-    <button class="btn btn-primary mb-3" [routerLink]="['/project-form', 0]">Nuevo Proyecto</button>
-  
-    <ul class="list-group">
-      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let project of projects">
-        <span>{{ project.name }}</span>
-  
-        <div>
-          <button class="btn btn-warning btn-sm me-2" [routerLink]="['/project-form', project.id]">Editar</button>
-  
-          <button class="btn btn-danger btn-sm me-2" (click)="deleteProject(project.id)">Eliminar</button>
-  
-          <button class="btn btn-info btn-sm" [routerLink]="['/project', project.id]">Ver Tareas</button>
-        </div>
-      </li>
-    </ul>
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+      <button class="btn btn-primary px-4 py-2 fw-semibold shadow-sm mb-2 mb-md-0" [routerLink]="['/project-form', 0]">
+          + Nuevo Proyecto
+      </button>
   </div>
-  
+
+ 
+  <div class="card shadow-lg rounded-4 p-3 bg-light">
+      <ul class="list-group list-group-flush">
+          <li 
+              class="list-group-item d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center py-3 border-0 border-bottom"
+              *ngFor="let project of projects">
+              
+              
+              <span class="fw-semibold text-dark text-center text-sm-start mb-2 mb-sm-0">{{ project.name }}</span>
+
+              
+              <div class="d-flex flex-wrap justify-content-center justify-content-sm-end gap-2">
+                  <button class="btn btn-warning btn-sm shadow-sm" [routerLink]="['/project-form', project.id]">
+                       Editar
+                  </button>
+
+                  <button class="btn btn-danger btn-sm shadow-sm" (click)="deleteProject(project.id)">
+                       Eliminar
+                  </button>
+
+                  <button class="btn btn-info btn-sm shadow-sm" [routerLink]="['/project', project.id]">
+                       Ver Tareas
+                  </button>
+              </div>
+          </li>
+      </ul>
+  </div>
+</div>

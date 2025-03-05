@@ -48,4 +48,3 @@ export class UserManagementComponent implements OnInit {
     return this.authService.isAdmin();
   }
 }
-

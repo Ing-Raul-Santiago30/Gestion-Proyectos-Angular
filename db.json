@@ -1,18 +1,6 @@
 {
   "projects": [
     {
-      "id": "fe7b",
-      "name": "ESTO",
-      "description": "12",
-      "tasks": [
-        {
-          "name": "fr",
-          "completed": false,
-          "id": "1"
-        }
-      ]
-    },
-    {
       "id": "8150",
       "name": "JuanitoPerez",
       "description": "Salsa",
@@ -26,6 +14,11 @@
           "name": "aaa",
           "completed": false,
           "id": "1"
+        },
+        {
+          "name": "js",
+          "completed": false,
+          "id": "3"
         }
       ]
     },
@@ -50,26 +43,32 @@
           "id": "3"
         }
       ]
+    },
+    {
+      "id": "6ee0",
+      "name": "tr",
+      "description": "gvfg",
+      "tasks": []
+    },
+    {
+      "id": "c41b",
+      "name": "pesas",
+      "description": "ds",
+      "tasks": []
     }
   ],
   "users": [
     {
-      "id": "1",
+      "id": "8362",
       "username": "admin",
       "password": "admin123",
       "role": "admin"
     },
     {
-      "id": "52c2",
-      "username": "Raul",
-      "password": "Raul",
-      "role": "editor"
-    },
-    {
-      "id": "61b4",
+      "id": "ccc0",
       "username": "raul",
-      "password": "1234",
-      "role": "admin"
+      "password": "admin123",
+      "role": "editor"
     }
   ]
 }

@@ -1,20 +1,37 @@
-<div class="container">
-    <h2>Iniciar Sesión</h2>
-  
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow-lg p-4" style="width: 100%; max-width: 600px; border-radius: 12px;">
+    <div class="text-center">
+      <h2 class="fw-bold mb-4 text-primary">Iniciar Sesión</h2>
+    </div>
+
     <form (ngSubmit)="login()">
       <div class="mb-3">
-        <label class="form-label">Usuario</label>
-        <input class="form-control" [(ngModel)]="username" name="username" required>
+        <label class="form-label fw-semibold">Usuario</label>
+        <div class="input-group">
+          <span class="input-group-text bg-primary text-white">
+            <i class="bi bi-person-fill"></i>
+          </span>
+          <input class="form-control" [(ngModel)]="username" name="username" required placeholder="Ingresa tu usuario">
+        </div>
       </div>
-  
+
       <div class="mb-3">
-        <label class="form-label">Contraseña</label>
-        <input type="password" class="form-control" [(ngModel)]="password" name="password" required>
+        <label class="form-label fw-semibold">Contraseña</label>
+        <div class="input-group">
+          <span class="input-group-text bg-primary text-white">
+            <i class="bi bi-lock-fill"></i>
+          </span>
+          <input type="password" class="form-control" [(ngModel)]="password" name="password" required placeholder="Ingresa tu contraseña">
+        </div>
       </div>
-  
-      <button type="submit" class="btn btn-primary">Ingresar</button>
-  
-      <p class="text-danger" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      <button type="submit" class="btn btn-primary w-100 fw-semibold">
+        <i class="bi bi-box-arrow-in-right"></i> Ingresar
+      </button>
+
+      <p class="text-danger text-center mt-3 fw-semibold" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      
     </form>
   </div>
-  
+</div>

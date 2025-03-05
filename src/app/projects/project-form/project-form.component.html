@@ -1,19 +1,51 @@
-<div class="container">
-    <h2>{{ project.id ? 'Editar Proyecto' : 'Nuevo Proyecto' }}</h2>
-  
-    <form (ngSubmit)="saveProject()">
+<div class="container py-4">
+  <div class="card shadow-lg rounded-4 p-4 bg-light">
+    <h2 class="text-center fw-bold text-primary mb-4">
+      {{ project?.id ? 'Editar Proyecto' : 'Nuevo Proyecto' }}
+    </h2>
+
+    <form #projectForm="ngForm" (ngSubmit)="saveProject()" class="needs-validation">
       <div class="mb-3">
-        <label class="form-label">Nombre</label>
-        <input class="form-control" [(ngModel)]="project.name" name="name" required>
+        <label class="form-label fw-semibold">Nombre</label>
+        <input 
+          type="text"
+          class="form-control shadow-sm" 
+          [(ngModel)]="project.name" 
+          name="name" 
+          required
+          #nameInput="ngModel">
+        <div *ngIf="nameInput.invalid && nameInput.touched" class="text-danger small mt-1">
+           El nombre es obligatorio.
+        </div>
       </div>
       
       <div class="mb-3">
-        <label class="form-label">Descripción</label>
-        <textarea class="form-control" [(ngModel)]="project.description" name="description" required></textarea>
+        <label class="form-label fw-semibold">Descripción</label>
+        <textarea 
+          class="form-control shadow-sm" 
+          [(ngModel)]="project.description" 
+          name="description" 
+          required
+          rows="3"
+          #descInput="ngModel"></textarea>
+        <div *ngIf="descInput.invalid && descInput.touched" class="text-danger small mt-1">
+           La descripción es obligatoria.
+        </div>
       </div>
-  
-      <button type="submit" class="btn btn-primary">{{ project.id ? 'Actualizar' : 'Guardar' }}</button>
-      <a class="btn btn-secondary" [routerLink]="['/']">Cancelar</a>
+
+      
+      <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-end gap-3">
+        <button 
+          type="submit" 
+          class="btn btn-primary px-4 py-2 shadow-sm fw-semibold" 
+          [disabled]="projectForm.invalid">
+          {{ project?.id ? 'Actualizar' : 'Guardar' }}
+        </button>
+        
+        <a class="btn btn-secondary px-4 py-2 shadow-sm fw-semibold" [routerLink]="['/']">
+          Cancelar
+        </a>
+      </div>
     </form>
   </div>
-  
+</div>
